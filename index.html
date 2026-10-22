@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Tshikota Fulufhedzeani | Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+  <!-- VIBRANT BACKGROUND -->
+  <div class="desktop-background">
+    <video autoplay loop muted playsinline id="bg-video">
+      <source src="scene.mp4" type="video/mp4">
+    </video>
+    <div class="glass-overlay"></div>
+  </div>
+
+  <!-- MACOS TOP BAR -->
+  <div class="macos-top-bar">
+    <div class="top-bar-left">
+      <i class="ph ph-apple-logo"></i>
+      <span class="app-name">Tshikota Portfolio</span>
+    </div>
+    <div class="top-bar-right">
+      <span id="top-bar-time"></span>
+    </div>
+  </div>
+
+  <!-- DESKTOP ICONS (8 Functional Apps) -->
+  <div class="desktop-icons">
+    <div class="desktop-icon" onclick="openWindow('about')">
+      <div class="icon-image app-icon-blue"><i class="ph ph-user"></i></div>
+      <span class="icon-label">About Me</span>
+    </div>
+    <div class="desktop-icon" onclick="openWindow('skills')">
+      <div class="icon-image app-icon-orange"><i class="ph ph-briefcase"></i></div>
+      <span class="icon-label">Skills</span>
+    </div>
+    <div class="desktop-icon" onclick="openWindow('languages')">
+      <div class="icon-image app-icon-purple"><i class="ph ph-code"></i></div>
+      <span class="icon-label">Languages</span>
+    </div>
+    <div class="desktop-icon" onclick="openWindow('projects')">
+      <div class="icon-image app-icon-green"><i class="ph ph-rocket-launch"></i></div>
+      <span class="icon-label">Projects</span>
+    </div>
+    <div class="desktop-icon" onclick="openWindow('education')">
+      <div class="icon-image app-icon-teal"><i class="ph ph-graduation-cap"></i></div>
+      <span class="icon-label">Education</span>
+    </div>
+    <div class="desktop-icon" onclick="openWindow('certifications')">
+      <div class="icon-image app-icon-yellow"><i class="ph ph-certificate"></i></div>
+      <span class="icon-label">Certifications</span>
+    </div>
+    <div class="desktop-icon" onclick="openWindow('contact')">
+      <div class="icon-image app-icon-red"><i class="ph ph-envelope"></i></div>
+      <span class="icon-label">Contact</span>
+    </div>
+    <div class="desktop-icon" onclick="openWindow('cv')">
+      <div class="icon-image app-icon-gray"><i class="ph ph-file-text"></i></div>
+      <span class="icon-label">My CV.pdf</span>
+    </div>
+  </div>
+
+  <!-- MAIN GLASS WINDOW -->
+  <div id="main-window" class="macos-window">
+    <div class="window-header">
+      <div class="window-controls">
+        <button class="control-btn close" onclick="closeWindow()"></button>
+        <button class="control-btn minimize"></button>
+        <button class="control-btn maximize"></button>
+      </div>
+      <div class="window-title-bar">
+        <i class="ph ph-folder" style="margin-right: 6px; font-size: 14px;"></i>
+        <span id="window-title">Information</span>
+      </div>
+      <div class="window-spacer"></div>
+    </div>
+    <div class="window-content" id="window-body">
+      <!-- Default Content -->
+      <div class="profile-header">
+        <img src="pic/pic.jpg" alt="Tshikota" class="profile-avatar" onerror="this.src='https://ui-avatars.com/api/?name=Tshikota+Fulufhedzeani&background=8b5cf6&color=fff&size=200'">
+        <div class="profile-info">
+          <h1>Tshikota Fulufhedzeani</h1>
+          <p class="profile-subtitle">Information Technology Graduate | Data & Databases</p>
+          <p class="profile-location"><i class="ph ph-map-pin"></i> Vuwani, Limpopo, South Africa</p>
+        </div>
+      </div>
+      <div class="profile-content">
+        <p>Welcome to my portfolio. Click the desktop icons to explore my skills, projects, and background.</p>
+        <p>I am a detail-oriented IT graduate with hands-on experience in data cleaning, preprocessing, and structured dataset analysis using SQL, Python, Pandas, and NumPy.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MACOS DOCK WITH TOOLTIPS -->
+  <div class="macos-dock">
+    <a href="mailto:Fulufhedzeani@gmail.com" class="dock-item" title="Fulufhedzeani@gmail.com">
+      <div class="dock-icon dock-email"><i class="ph ph-envelope-simple"></i></div>
+      <span class="dock-tooltip">Fulufhedzeani@gmail.com</span>
+    </a>
+    <a href="tel:+27736235027" class="dock-item" title="073 623 5027">
+      <div class="dock-icon dock-phone"><i class="ph ph-phone"></i></div>
+      <span class="dock-tooltip">073 623 5027</span>
+    </a>
+    <a href="https://www.linkedin.com/in/fulufhedzeani-tshikota" target="_blank" class="dock-item">
+      <div class="dock-icon dock-linkedin"><i class="ph ph-linkedin-logo"></i></div>
+      <span class="dock-tooltip">LinkedIn Profile</span>
+    </a>
+    <a href="https://github.com/vhakota" target="_blank" class="dock-item">
+      <div class="dock-icon dock-github"><i class="ph ph-github-logo"></i></div>
+      <span class="dock-tooltip">GitHub Profile</span>
+    </a>
+    <div class="dock-divider"></div>
+    <a href="Tshikota_Fulufhedzeani_CV.pdf" target="_blank" class="dock-item">
+      <div class="dock-icon dock-cv"><i class="ph ph-download-simple"></i></div>
+      <span class="dock-tooltip">Download CV</span>
+    </a>
+  </div>
+
+  <!-- MOBILE QUICK ACTIONS -->
+  <div class="mobile-quick-actions">
+    <a href="mailto:Fulufhedzeani@gmail.com" class="quick-btn glass-btn"><i class="ph ph-envelope"></i></a>
+    <a href="tel:+27736235027" class="quick-btn glass-btn"><i class="ph ph-phone"></i></a>
+    <a href="Tshikota_Fulufhedzeani_CV.pdf" target="_blank" class="quick-btn glass-btn primary"><i class="ph ph-download-simple"></i></a>
+  </div>
+
+  <script src="text.js"></script>
+</body>
+</html>
